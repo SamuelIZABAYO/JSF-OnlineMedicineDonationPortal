@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="SignUp Form"/></h1>
+                <h:panelGrid columns="2">
+                     <h:outputLabel value="Name:" for="name" />
+                     <h:inputText id="name" value="#{lm.user.name}" title="Name"/>
+                    <h:outputLabel value="UserName:" for="userName" />
+                    <h:inputText id="userName" value="#{lm.user.userName}" title="UserName" />
+                    <h:outputLabel value="Password:" for="password" />
+                    <h:inputText id="password" value="#{lm.user.password}" title="Password" />
+                    <h:outputLabel value="Roles:" for="roles" id="roles"/>
+                    <h:selectOneRadio value="#{lm.role}">
+                            <f:selectItem itemLabel="Donor" itemValue="donor"/>
+                            <f:selectItem itemLabel="Ngo" itemValue="ngo" />
+                        </h:selectOneRadio>
+                    <h:outputLabel value="Location:" for="location" />
+                    <h:inputText id="location" value="#{lm.user.location}" title="Location" />
+                    <h:outputLabel value="ContactNo:" for="contactNo" />
+                    <h:inputText id="contactNo" value="#{lm.user.contactNo}" title="ContactNo" />
+                    <h:commandButton value="SignUp" action="#{lm.signUp()}"></h:commandButton>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </body>
+</html>

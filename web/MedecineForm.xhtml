@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Record medicine</h1>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="EXP_date:" for="EXP_date" />
+                    <h:inputText id="EXP_date" value="#{lm.EXP_date}" title="EXP_date" />
+                    <h:outputLabel value="MedecineId:" for="medecineId" />
+                    <h:inputText id="medecineId" value="#{lm.medecineId}" title="MedecineId" />
+                    <h:outputLabel value="MedicineName:" for="medicineName" />
+                    <h:inputText id="medicineName" value="#{lm.medicineName}" title="MedicineName" />
+                    <h:outputLabel value="MNF_date:" for="MNF_date" />
+                    <h:inputText id="MNF_date" value="#{lm.MNF_date}" title="MNF_date" />
+                    <h:outputLabel value="Qty:" for="qty" />
+                    <h:inputText id="qty" value="#{lm.qty}" title="Qty" />
+                    <h:outputLabel value="Donor:" for="donor" />
+                    <h:selectOneMenu id="donor" value="#{lm.donor}" title="Donor" >
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
